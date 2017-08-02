@@ -83,7 +83,14 @@ private:
     }
 };
 
-// leetcode提示的做法
+// (2）通过hash的方法
+// Traverse list A and store the address / reference to each node in a hash set. Then check every node bi in list B: if bi appears in the hash set, then bi is the intersection node.
+// Complexity Analysis
+// Time complexity : O(m+n)O(m+n).
+// Space complexity : O(m)O(m) or O(n)O(n).
+
+// (3) leetcode提示的做法
+// huihui：其实也是补齐开头的思想，通过2个链表的长度差的思想
 // class Solution {
 // public:
 //     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
