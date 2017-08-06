@@ -50,6 +50,23 @@ public:
         walk->next = evenHead;
         return head;
     }
+
+    // leetcode讨论区，while的判断条件更加清晰的例子
+    // ListNode* oddEvenList(ListNode* head)
+    // {
+    //     if(!head) return head;
+    //     ListNode *odd=head, *evenhead=head->next, *even = evenhead;
+    //     while(even && even->next)
+    //     {
+    //         odd->next = odd->next->next;
+    //         even->next = even->next->next;
+    //         odd = odd->next;
+    //         even = even->next;
+    //     }
+    //     odd->next = evenhead;
+    //     return head;
+    // }
+
 };
 
 // 10:12, 1041写完，还是用了半个小时,结果不正确。
