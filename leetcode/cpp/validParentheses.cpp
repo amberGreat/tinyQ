@@ -41,6 +41,26 @@ public:
     }
 };
 
+// 解法的另一个思路
+// class Solution {
+// public:
+//     bool isValid(string s) {
+//         stack<char> paren;
+//         for (char& c : s) {
+//             switch (c) {
+//                 case '(': 
+//                 case '{': 
+//                 case '[': paren.push(c); break;
+//                 case ')': if (paren.empty() || paren.top()!='(') return false; else paren.pop(); break;
+//                 case '}': if (paren.empty() || paren.top()!='{') return false; else paren.pop(); break;
+//                 case ']': if (paren.empty() || paren.top()!='[') return false; else paren.pop(); break;
+//                 default: ; // pass
+//             }
+//         }
+//         return paren.empty() ;
+//     }
+// };
+
 int main(int argc, char* argv[]) {
     Solution solu; 
     string str = "()[]";
